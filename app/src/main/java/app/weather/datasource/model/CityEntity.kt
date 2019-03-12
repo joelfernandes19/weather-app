@@ -8,7 +8,7 @@ import com.squareup.moshi.Json
  * * Mapping City entity with domain
  */
 data class CityEntity(
-    @field:Json(name = "id") val id : String,
+    @field:Json(name = "id") val id : Int,
     @field:Json(name = "name") val name : String,
     @field:Json(name = "country") val country : String,
     @field:Json(name = "coord") val coordinates : CoordinatesEntity

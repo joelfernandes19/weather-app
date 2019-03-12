@@ -8,7 +8,7 @@ data class CurrentWeather(
     val clouds : Clouds,
     val wind : Wind,
     val rain : Rain,
-    val id : String,
+    val id : Int,
     val name : String,
     val coordinates : Coordinates
 )
@@ -39,7 +39,7 @@ data class Conditions(
 )
 
 data class WeatherInfo(
-    val id : String,
+    val id : Int,
     val params : String,
     val description : String,
     val icon : String
