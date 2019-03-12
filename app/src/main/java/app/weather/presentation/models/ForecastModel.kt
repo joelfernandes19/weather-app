@@ -24,7 +24,7 @@ fun CurrentWeather.mapToPresentation() : CurrentWeatherModel =
         clouds = clouds.mapToPresentation(),
         wind = wind.mapToPresentation(),
         rain = rain.mapToPresentation(),
-        dateFormatted = formatDate(dateUTC),
+        dateFormatted = dateUTC.formatDate(),
         id = id,
         name = name,
         coordinates = coordinates.mapToPresentation()
@@ -58,7 +58,7 @@ fun Forecast.mapToPresentation() : ForecastModel =
         dateUTC = dateUTC,
         weatherConditions = weatherConditions.mapToPresentation(), weatherInfo = weatherInfo.mapListToPresentation(),
         clouds = clouds.mapToPresentation(), wind = wind.mapToPresentation(), rain = rain.mapToPresentation(),
-        dateTime = dateTime, dateFormatted = formatDate(dateUTC)
+        dateTime = dateTime, dateFormatted = dateUTC.formatDate()
     )
 fun List<WeatherInfo>.mapListToPresentation() : List<WeatherInfoModel> = map { it.mapToPresentation() }
 
