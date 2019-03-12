@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="five_day_forecast">5 day forecast</string>
+    <string name="max_min">2:30 PM\nMin 32° C\nMax 28° C</string>
+    <string name="today">Today</string>
+    <string name="degree_c">° C</string>
+    <string name="clear_sky">Clear Sky</string>
+
+</resources>
