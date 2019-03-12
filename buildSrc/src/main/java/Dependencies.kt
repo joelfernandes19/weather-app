@@ -87,4 +87,7 @@ object TestLibraries {
     val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
     val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
     val lifecycleTesting = "androidx.arch.core:core-testing:${Versions.lifecycle}"
+    val powermock = "org.powermock:powermock-core:1.7.0RC2"
+    val powermockModule = "org.powermock:powermock-module-junit4:1.7.0RC2"
+    val powermockApi = "org.powermock:powermock-api-mockito2:1.7.0RC2"
 }

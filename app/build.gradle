@@ -55,4 +55,12 @@ dependencies {
     testImplementation TestLibraries.junit
     androidTestImplementation TestLibraries.runner
     androidTestImplementation TestLibraries.espresso
+
+    testImplementation TestLibraries.assertjCore
+    testImplementation TestLibraries.mockitoKotlin
+    testImplementation TestLibraries.mockitoInline
+    testImplementation TestLibraries.powermock
+    testImplementation TestLibraries.powermockModule
+    testImplementation TestLibraries.powermockApi
+    testImplementation TestLibraries.lifecycleTesting
 }
