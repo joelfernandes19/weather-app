@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateCurrentWeather(currentWeatherModel: CurrentWeatherModel) {
         tvCurrentTemp.text = formatTemperature(currentWeatherModel.weatherConditions.temp)
-        tvLocalTime.text = formatDate(currentWeatherModel.dateUTC)
+        tvLocalTime.text = currentWeatherModel.dateUTC.formatDate()
         tvLastSynced.text = "Last updated: ${formatDateWithTime(currentWeatherModel.dateUTC)}"
     }
 

@@ -12,7 +12,7 @@ data class CurrentWeatherModel(
     val wind : WindModel,
     val rain : RainModel,
     val dateFormatted : String,
-    val id : String,
+    val id : Int,
     val name : String,
     val coordinates : CoordinatesModel
 )
@@ -24,7 +24,7 @@ fun CurrentWeather.mapToPresentation() : CurrentWeatherModel =
         clouds = clouds.mapToPresentation(),
         wind = wind.mapToPresentation(),
         rain = rain.mapToPresentation(),
-        dateFormatted = formatDate(dateUTC),
+        dateFormatted = dateUTC.formatDate(),
         id = id,
         name = name,
         coordinates = coordinates.mapToPresentation()
@@ -58,7 +58,7 @@ fun Forecast.mapToPresentation() : ForecastModel =
         dateUTC = dateUTC,
         weatherConditions = weatherConditions.mapToPresentation(), weatherInfo = weatherInfo.mapListToPresentation(),
         clouds = clouds.mapToPresentation(), wind = wind.mapToPresentation(), rain = rain.mapToPresentation(),
-        dateTime = dateTime, dateFormatted = formatDate(dateUTC)
+        dateTime = dateTime, dateFormatted = dateUTC.formatDate()
     )
 fun List<WeatherInfo>.mapListToPresentation() : List<WeatherInfoModel> = map { it.mapToPresentation() }
 
@@ -80,7 +80,7 @@ fun Conditions.mapToPresentation() : ConditionsModel =
     )
 
 data class WeatherInfoModel(
-    val id : String,
+    val id : Int,
     val params : String,
     val description : String,
     val icon : String
