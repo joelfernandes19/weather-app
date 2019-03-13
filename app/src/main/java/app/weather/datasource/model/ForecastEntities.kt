@@ -10,7 +10,7 @@ data class CurrentWeatherEntity(
     @field:Json(name = "clouds") val clouds : CloudsEntity,
     @field:Json(name = "wind") val wind : WindEntity,
     @field:Json(name = "rain") val rain : RainEntity?,
-    @field:Json(name = "id") val id : String,
+    @field:Json(name = "id") val id : Int,
     @field:Json(name = "name") val name : String,
     @field:Json(name = "coord") val coordinates : CoordinatesEntity
 )
@@ -77,7 +77,7 @@ fun ConditionsEntity.mapToDomain() : Conditions = Conditions(temp = temp, minTem
  *
  */
 data class WeatherInfoEntity(
-    @field:Json(name = "id") val id : String,
+    @field:Json(name = "id") val id : Int,
     @field:Json(name = "main") val params : String,
     @field:Json(name = "description") val description : String,
     @field:Json(name = "icon") val icon : String

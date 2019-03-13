@@ -18,9 +18,9 @@ val Context.isConnected: Boolean
 val Int.px: Int
     get() = (this * Resources.getSystem().displayMetrics.density).toInt()
 
-fun formatDate(timestamp : Long) : String {
+fun Long.formatDate() : String {
     val cal = Calendar.getInstance(Locale.ENGLISH)
-    cal.timeInMillis = timestamp * 1000L
+    cal.timeInMillis = this * 1000L
     return DateFormat.format("MMMM d", cal).toString()
 }
 

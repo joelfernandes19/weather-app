@@ -4,7 +4,7 @@ import app.weather.domain.model.City
 import app.weather.domain.model.Coordinates
 
 data class CityModel(
-    val id : String,
+    val id : Int,
     val name : String,
     val country : String,
     val coordinates : CoordinatesModel

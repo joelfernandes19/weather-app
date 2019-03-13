@@ -23,7 +23,7 @@ class WeatherDetailsViewModel constructor(private val weatherUseCases: UCWeather
         getFiveDayForecast(city, country, refresh)
     }
 
-    private fun getFiveDayForecast(city : String, country : String, refresh: Boolean) =
+    fun getFiveDayForecast(city : String, country : String, refresh: Boolean) =
         compositeDisposable.add(weatherUseCases.getFiveDaysForecast(city, country, refresh)
             .subscribeOn(Schedulers.io())
             .map { it.mapToPresentation() }
@@ -68,7 +68,7 @@ class WeatherDetailsViewModel constructor(private val weatherUseCases: UCWeather
         )
 
 
-    private fun getCurrentWeather(city: String, country: String, refresh: Boolean) =
+    fun getCurrentWeather(city: String, country: String, refresh: Boolean) =
         compositeDisposable.add(weatherUseCases.getCurrentWeather(city, country, refresh)
             .subscribeOn(Schedulers.io())
             .map { it.mapToPresentation() }
