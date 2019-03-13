@@ -16,4 +16,3 @@ Data is fetched from Open Weather Map - https://openweathermap.org/
 - **Loading of data from local cache**
 Once data has been loaded from remote data source, the same is currently being stored in cache. On next data retrieval call, we need to check if data exists in cache before making api call.
 - **Auto detect current location**
-- **Writing test cases**
